@@ -5,7 +5,7 @@ const fs = require('fs');
 const defaultUrl = 'https://prnt.sc/';
 
 function generateID(len) {
-    const alphabet = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+    const alphabet = '1234567890qwertyuiopasdfghjklzxcvbnm';
     let id = '';
     for(let i = 0; i < len; i++) {
         id += alphabet[Math.floor(Math.random() * alphabet.length)];
@@ -34,4 +34,4 @@ function downloadImage() {
 
 let downloadTimer = setInterval(() => {
     downloadImage();
-}, 1000);
+}, 2000);
